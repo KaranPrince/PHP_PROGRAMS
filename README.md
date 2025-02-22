@@ -37,6 +37,69 @@ For example, to run the `1-FACTORIAL.php` program:
 1.  Place the `1-FACTORIAL.php` file in your `C:\xampp\htdocs` folder.
 2.  Open your browser and go to `http://localhost/1-FACTORIAL.php`.
 
+## Running the Authentication Program (11-AUTHENTICATION WEB PAGE CHECK USERNAME & PASSWORD.php)
+
+The `11-AUTHENTICATION WEB PAGE CHECK USERNAME & PASSWORD.php` program requires a database setup. Follow these steps to run it:
+
+1.  **Install XAMPP:**
+    * (Same as above)
+
+2.  **Start Apache and MySQL:**
+    * (Same as above)
+
+3.  **Place the PHP File in `htdocs`:**
+    * (Same as above)
+
+4.  **Create the `phplogin` Database:**
+    * Open phpMyAdmin in your browser: `http://localhost/phpmyadmin`.
+    * Click on the "Databases" tab.
+    * In the "Create database" field, type `phplogin`.
+    * Click the "Create" button.
+
+5.  **Create the `users` Table:**
+    * Select the `phplogin` database from the left-hand menu.
+    * Click on the "SQL" tab.
+    * Paste the following SQL code into the text area:
+
+        ```sql
+        CREATE TABLE users (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            username VARCHAR(255) UNIQUE NOT NULL,
+            password VARCHAR(255) NOT NULL
+        );
+        ```
+
+    * Click the "Go" button.
+
+6.  **Add a Test User:**
+    * Still in the "SQL" tab of phpMyAdmin, paste the following SQL code, replacing `'your_username'` and `'your_password'` with your desired username and password:
+
+        ```sql
+        INSERT INTO users (username, password) VALUES ('your_username', 'your_password');
+        ```
+
+        * **Example:**
+
+            ```sql
+            INSERT INTO users (username, password) VALUES ('testuser', 'password123');
+            ```
+
+    * Click the "Go" button.
+    * **Warning:** This is for testing only. In a real application, you should hash the password before storing it in the database.
+
+7.  **Access the Login Page:**
+    * Open your web browser.
+    * In the address bar, type `http://localhost/11-AUTHENTICATION WEB PAGE CHECK USERNAME & PASSWORD.php` and press Enter.
+    * You should see the login form.
+
+8.  **Login:**
+    * Enter the username and password you added to the `users` table in step 6.
+    * Click the "Login" button.
+
+9.  **View the Result:**
+    * If the login is successful, you should see "Login successful!" displayed.
+    * If the login fails, you should see "Incorrect username or password." displayed.
+
 ## Note
 
 * Ensure that your **XAMPP Apache** and **MySQL** services are running before trying to access the programs.
