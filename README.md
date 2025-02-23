@@ -37,6 +37,9 @@ For example, to run the `1-FACTORIAL.php` program:
 1.  Place the `1-FACTORIAL.php` file in your `C:\xampp\htdocs` folder.
 2.  Open your browser and go to `http://localhost/1-FACTORIAL.php`.
 
+## 7-DOWNLOAD FILE FROM SERVER
+  * IF OTHER LINK DOESN'T WORK/DOWNLOAD USE THE LINK I GIVE : `https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png` 
+
 ## Running the Authentication Program (11-AUTHENTICATION WEB PAGE CHECK USERNAME & PASSWORD.php)
 
 The `11-AUTHENTICATION WEB PAGE CHECK USERNAME & PASSWORD.php` program requires a database setup. Follow these steps to run it:
